@@ -25,8 +25,7 @@ Manual application deployments via web consoles or direct FTP uploads introduce 
                                                          ▼
                                             [ Live Public Website ]
 
-
- 🚀 Key Features
+🚀 Key Features
 Automated CI/CD: Continuous Deployment triggered on every code push to the main branch.
 
 Granular IAM Security: Principle of Least Privilege enforcement using dedicated IAM policy actions (s3:PutObject, s3:GetObject, s3:DeleteObject).
@@ -45,6 +44,7 @@ Version Control: Git & GitHub
 Frontend: HTML5, CSS3
 
 ⚙️ CI/CD Workflow (.github/workflows/deploy.yml)
+YAML
 name: Deploy Website to AWS S3
 
 on:
@@ -71,10 +71,10 @@ jobs:
         run: |
           aws s3 sync . s3://shantanu-cloud-project-2026 --delete --exclude ".git/*"
 
+
 👤 Author
 Shantanu Lande
 
 GitHub: @Shantanu-lande
 
 Domain Focus: Cloud Support, DevOps & Cloud Engineering
-
